@@ -1,0 +1,25 @@
+{
+  "name": "cli-calculator",
+  "version": "1.0.0",
+  "description": "A CLI calculator",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QWERTY-js/cli-calculator.git"
+  },
+  "keywords": [
+    "a-basic-cli-calculator"
+  ],
+  "author": "BooleanTrue",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/QWERTY-js/cli-calculator/issues"
+  },
+  "homepage": "https://github.com/QWERTY-js/cli-calculator#readme",
+  "dependencies": {
+    "prompts": "^2.4.1"
+  }
+}
