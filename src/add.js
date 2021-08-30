@@ -1,4 +1,5 @@
 const prompts = require("prompts");
+const askFinish = require("./askFinish");
 
 const add = async () => {
   console.clear();
@@ -7,7 +8,7 @@ const add = async () => {
   const addAk = [
     {
       type: "number",
-      name: "add",
+      name: "ao",
       message: "[+] Enter a Number to Add> ",
       style: "default",
       initial: "46"
@@ -15,6 +16,25 @@ const add = async () => {
   ];
 
   let adK = await prompts(addAk);
+
+  console.log("");
+
+  const addAkT = [
+    {
+      type: "number",
+      name: "at",
+      message: "[+] Enter a Number to Add> ",
+      style: "default",
+      initial: "47"
+    },
+  ];
+
+  let adKT = await prompts(addAkT);
+
+  console.log("");
+  console.log(" [=] result:", adK.ao + adKT.at);
+
+  askFinish();
 };
 
 module.exports = add;
