@@ -1,6 +1,7 @@
 const prompts = require("prompts");
 const figlet = require("figlet");
 const add = require("./add");
+const subtract = require("./subtract")
 
 console.clear();
 const loading = require("loading-indicator");
@@ -28,26 +29,29 @@ const app = async () => {
 
   const dashboard = [
     {
-        type: 'select',
-        name: 'ak',
-        message: 'What do you want to do?',
-        choices: [
-          { title: 'Add', description: '[+] Adds Numbers', value: 'add'},
-          { title: 'Subtract', description: '[-] Subtract Numbers', value: 'subtract' },
-          { title: 'Divide', description: '[/] Divide Numbers', value: 'divide' },
-          { title: 'Multiply', description: '[*] Multiply Numbers', value: 'multiply' },
-        ],
-      }
+      type: 'select',
+      name: 'ak',
+      message: 'What do you want to do?',
+      choices: [
+        { title: 'Add', description: '[+] Adds Numbers', value: 'add' },
+        { title: 'Subtract', description: '[-] Subtract Numbers', value: 'subtract' },
+        { title: 'Divide', description: '[/] Divide Numbers', value: 'divide' },
+        { title: 'Multiply', description: '[*] Multiply Numbers', value: 'multiply' },
+      ],
+    }
   ];
 
   let d = await prompts(dashboard);
 
   switch (d.ak) {
-      case 'add':
-          await add();
-          break;
+    case 'add':
+      await add();
+      break;
+    case 'subtract':
+      await subtract();
+      break;
   }
-    
+
 };
 
 module.exports = app;
