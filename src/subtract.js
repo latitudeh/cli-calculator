@@ -11,7 +11,13 @@ const subtract = async () => {
       name: "su",
       message: "[-] Enter a Number to Subtract> ",
       style: "default",
-      validate: value => value == "" ? `Enter a Number to Subtract` : true
+      validate: value => {
+        if (!isNaN(value) && value !== "") {
+          return true;
+        } else {
+          return 'Enter a valid number';
+        }
+      }
     },
   ];
 
@@ -25,14 +31,20 @@ const subtract = async () => {
       name: "sb",
       message: "[-] Enter a Number to Subtract> ",
       style: "default",
-      validate: value => value == "" ? `Enter a Number to Subtract` : true
+      validate: value => {
+        if (!isNaN(value) && value !== "") {
+          return true;
+        } else {
+          return 'Enter a valid number';
+        }
+      }
     },
   ];
 
   let suKT = await prompts(subAkT);
 
   console.log("");
-  console.log(" [=] result:", suK.su - suKT.sb);
+  console.log(" [=] Result:", suK.su - suKT.sb);
 
   askFinish();
 };

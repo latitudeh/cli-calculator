@@ -11,7 +11,13 @@ const add = async () => {
       name: "ao",
       message: "[+] Enter a Number to Add> ",
       style: "default",
-      validate: value => value == "" ? `Enter a Number to Add` : true
+      validate: value => {
+        if (!isNaN(value) && value !== "") {
+          return true;
+        } else {
+          return 'Enter a valid number';
+        }
+      }
     },
   ];
 
@@ -25,7 +31,13 @@ const add = async () => {
       name: "at",
       message: "[+] Enter a Number to Add> ",
       style: "default",
-      validate: value => value == "" ? `Enter a Number to Add` : true
+      validate: value => {
+        if (!isNaN(value) && value !== "") {
+          return true;
+        } else {
+          return 'Enter a valid number';
+        }
+      }
     },
   ];
 
