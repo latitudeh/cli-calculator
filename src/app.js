@@ -2,6 +2,7 @@ const prompts = require("prompts");
 const figlet = require("figlet");
 const add = require("./add");
 const subtract = require("./subtract")
+const multiply = require("./multiply");
 
 console.clear();
 const loading = require("loading-indicator");
@@ -49,6 +50,9 @@ const app = async () => {
       break;
     case 'subtract':
       await subtract();
+      break;
+    case 'multiply':
+      await multiply();
       break;
   }
 
