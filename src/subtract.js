@@ -11,7 +11,13 @@ const subtract = async () => {
       name: "su",
       message: "[-] Enter a Number to Subtract> ",
       style: "default",
-      validate: value => isNaN(value) ? true : 'Enter a number'
+      validate: value => {
+        if (!isNaN(value) && value !== "") {
+          return true;
+        } else {
+          return 'Enter a valid number';
+        }
+      }
     },
   ];
 
@@ -25,7 +31,13 @@ const subtract = async () => {
       name: "sb",
       message: "[-] Enter a Number to Subtract> ",
       style: "default",
-      validate: value => isNaN(value) ? true : 'Enter a number'
+      validate: value => {
+        if (!isNaN(value) && value !== "") {
+          return true;
+        } else {
+          return 'Enter a valid number';
+        }
+      }
     },
   ];
 
