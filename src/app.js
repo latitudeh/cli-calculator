@@ -4,6 +4,7 @@ const add = require("./add");
 const subtract = require("./subtract")
 const multiply = require("./multiply");
 const divide = require("./divide");
+const updater = require("../src/updater/updater")
 
 console.clear();
 const loading = require("loading-indicator");
