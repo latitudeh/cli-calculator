@@ -12,7 +12,7 @@ const divide = async () => {
             name: "di",
             message: "[/] Enter a Number to Divide> ",
             style: "default",
-            validate: value => isNaN(value) ? `Enter a Number to Subtract` : true
+            validate: value => isNaN(value) ? true : 'Enter a number'
         },
     ];
 
@@ -26,7 +26,7 @@ const divide = async () => {
             name: "dv",
             message: "[/] Enter a Number to Divide> ",
             style: "default",
-            validate: value => isNaN(value) ? `Enter a Number to Subtract` : true
+            validate: value => isNaN(value) ? true : 'Enter a number'
         },
     ];
 

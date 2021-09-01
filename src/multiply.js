@@ -11,7 +11,7 @@ const multiply = async () => {
       name: "mu",
       message: "[*] Enter a Number to Multiply> ",
       style: "default",
-      validate: value => isNaN(value) ? `Enter a Number to Subtract` : true
+      validate: value => isNaN(value) ? true : 'Enter a number'
     },
   ];
 
@@ -25,7 +25,7 @@ const multiply = async () => {
       name: "mt",
       message: "[*] Enter a Number to Multiply> ",
       style: "default",
-      validate: value => isNaN(value) ? `Enter a Number to Subtract` : true
+      validate: value => isNaN(value) ? true : 'Enter a number'
     },
   ];
 
