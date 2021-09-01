@@ -3,7 +3,7 @@ const loading = require("loading-indicator");
 const chalk = require("chalk");
 
 const askFinish = async () => {
-    const app = require("./app");
+    const app = require("../app");
     console.log("");
 
     const ask = [
