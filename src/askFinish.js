@@ -1,5 +1,6 @@
 const prompts = require("prompts");
 const loading = require("loading-indicator");
+const chalk = require("chalk");
 
 const askFinish = async () => {
     const app = require("./app");
@@ -9,7 +10,7 @@ const askFinish = async () => {
         {
             type: 'select',
             name: 'a',
-            message: '[~] Do you want to go back to the main menu?',
+            message: (chalk.yellow('[~] Do you want to go back to the main menu?')),
             choices: [
                 { title: 'no', description: 'exit', value: 'no' },
                 { title: 'yes', description: 'go back', value: 'yes' },

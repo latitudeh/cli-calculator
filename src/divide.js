@@ -12,7 +12,7 @@ const divide = async () => {
             name: "di",
             message: "[/] Enter a Number to Divide> ",
             style: "default",
-            initial: "46"
+            validate: value => value == "" ? `Enter a Number to Divide` : true
         },
     ];
 
@@ -26,7 +26,7 @@ const divide = async () => {
             name: "dv",
             message: "[/] Enter a Number to Divide> ",
             style: "default",
-            initial: "47"
+            validate: value => value == "" ? `Enter a Number to Divide` : true
         },
     ];
 

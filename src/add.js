@@ -11,7 +11,7 @@ const add = async () => {
       name: "ao",
       message: "[+] Enter a Number to Add> ",
       style: "default",
-      initial: "46"
+      validate: value => value == "" ? `Enter a Number to Add` : true
     },
   ];
 
@@ -25,7 +25,7 @@ const add = async () => {
       name: "at",
       message: "[+] Enter a Number to Add> ",
       style: "default",
-      initial: "47"
+      validate: value => value == "" ? `Enter a Number to Add` : true
     },
   ];
 

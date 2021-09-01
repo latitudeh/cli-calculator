@@ -11,7 +11,7 @@ const multiply = async () => {
       name: "mu",
       message: "[*] Enter a Number to Multiply> ",
       style: "default",
-      initial: "46"
+      validate: value => value == "" ? `Enter a Number to Multiply` : true
     },
   ];
 
@@ -25,7 +25,7 @@ const multiply = async () => {
       name: "mt",
       message: "[*] Enter a Number to Multiply> ",
       style: "default",
-      initial: "47"
+      validate: value => value == "" ? `Enter a Number to Multiply` : true
     },
   ];
 

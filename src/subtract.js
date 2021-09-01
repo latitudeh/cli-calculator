@@ -11,7 +11,7 @@ const subtract = async () => {
       name: "su",
       message: "[-] Enter a Number to Subtract> ",
       style: "default",
-      initial: "46"
+      validate: value => value == "" ? `Enter a Number to Subtract` : true
     },
   ];
 
@@ -25,7 +25,7 @@ const subtract = async () => {
       name: "sb",
       message: "[-] Enter a Number to Subtract> ",
       style: "default",
-      initial: "47"
+      validate: value => value == "" ? `Enter a Number to Subtract` : true
     },
   ];
 
