@@ -3,6 +3,7 @@ const figlet = require("figlet");
 const add = require("./add");
 const subtract = require("./subtract")
 const multiply = require("./multiply");
+const divide = require("./divide");
 
 console.clear();
 const loading = require("loading-indicator");
@@ -53,6 +54,9 @@ const app = async () => {
       break;
     case 'multiply':
       await multiply();
+      break;
+    case 'divide':
+      await divide();
       break;
   }
 
