@@ -1,10 +1,10 @@
 const prompts = require("prompts");
 const figlet = require("figlet");
-const add = require("./add");
-const subtract = require("./subtract")
-const multiply = require("./multiply");
-const divide = require("./divide");
-const updater = require("../src/updater/updater")
+const add = require("./src/add");
+const subtract = require("./src/subtract")
+const multiply = require("./src/multiply");
+const divide = require("./src/divide");
+const updater = require("./src/updater")
 
 console.clear();
 const loading = require("loading-indicator");
