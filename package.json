@@ -1,6 +1,6 @@
 {
   "name": "cli-calculator",
-  "version": "1.0.0",
+  "version": "2.0.2",
   "description": "A CLI calculator",
   "main": "src/app.js",
   "scripts": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/QWERTY-js/cli-calculator#readme",
   "dependencies": {
+    "chalk": "^4.1.2",
     "figlet": "^1.5.2",
     "loading-indicator": "^2.0.0",
     "prompts": "^2.4.1"
