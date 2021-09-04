@@ -7,7 +7,7 @@ const divide = require("./src/divide");
 const chalk = require("chalk");
 const updater = require("./src/updater")
 
-updater()
+updater();
 
 const app = async () => {
   console.clear();

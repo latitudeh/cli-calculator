@@ -4,7 +4,7 @@
   "description": "A CLI calculator",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "test": "node app.js"
   },
   "repository": {
     "type": "git",
