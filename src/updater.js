@@ -1,24 +1,26 @@
 const axios = require('axios');
 const version = require("../version.json");
-const { execSync } = require("child_process");
 const chalk = require("chalk");
+const path = require("path");
 
 const update = async () => {
-    axios.get('https://raw.githubusercontent.com/QWERTY-js/cli-calculator/main/version.json')
+    await axios.get('https://raw.githubusercontent.com/QWERTY-js/cli-calculator/main/version.json')
         .then(async function (response) {
-            if (response.data.version < version.version) {
-                await execSync('git pull', { encoding: "utf8" });
-
+            if (response.data.version > version.version) {
                 console.clear();
-                const loading = require("loading-indicator");
 
+                const child = require('child_process').exec('git pull', { cwd: path.dirname(__dirname)});
+                const loading = require("loading-indicator");
                 const timer = loading.start("Updating...");
 
+                await new Promise((resolve) => {
+                    child.on('close', resolve)
+                });
+                
                 setTimeout(() => {
-                    loading.stop(timer);
-                    const app = require("../app");
-                    app();
-                }, 2000);
+                    console.log(chalk.green("Updated! Restart the app"));
+                    process.exit();
+                }, 100);
             } else if (response.data.version == version.version) {
                 console.clear();
                 const loading = require("loading-indicator");
@@ -31,7 +33,7 @@ const update = async () => {
                     app();
                 }, 1600);
             } else {
-                console.log(chalk.red("Fatal Error"));
+                console.log(chalk.red("Could not check the program version.\nPlease clone the calculator in another folder in case you want to use the program"));
             }
         })
         .catch(function (error) {
