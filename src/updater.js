@@ -9,9 +9,9 @@ const update = async () => {
             if (response.data.version > version.version) {
                 console.clear();
 
-                const child = require('child_process').exec('git pull', { cwd: path.dirname(__dirname)});
+                const child = require('child_process').exec('git pull origin main', { cwd: path.dirname(__dirname)});
                 const loading = require("loading-indicator");
-                const timer = loading.start("Updating...");
+                loading.start("Updating...");
 
                 await new Promise((resolve) => {
                     child.on('close', resolve)
@@ -38,7 +38,7 @@ const update = async () => {
         })
         .catch(function (error) {
             console.log(error);
-        })
+        });
 };
 
 module.exports = update;
