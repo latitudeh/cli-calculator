@@ -28,7 +28,7 @@ const askFinish = async () => {
             const timer = loading.start("Leaving...");
             setTimeout(() => {
                 loading.stop(timer);
-            }, 3000);
+            }, 1400);
             console.log("");
     }
 };

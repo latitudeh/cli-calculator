@@ -6,15 +6,7 @@ const multiply = require("./src/multiply");
 const divide = require("./src/divide");
 const updater = require("./src/updater")
 
-console.clear();
-const loading = require("loading-indicator");
-
-const timer = loading.start("Loading...");
-
-setTimeout(() => {
-  loading.stop(timer);
-  app();
-}, 3000);
+updater()
 
 const app = async () => {
   console.clear();
