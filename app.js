@@ -4,6 +4,7 @@ const add = require("./src/add");
 const subtract = require("./src/subtract")
 const multiply = require("./src/multiply");
 const divide = require("./src/divide");
+const chalk = require("chalk");
 const updater = require("./src/updater")
 
 updater()
@@ -26,7 +27,7 @@ const app = async () => {
     {
       type: 'select',
       name: 'ak',
-      message: 'What do you want to do?',
+      message: (chalk.yellow('What do you want to do?')),
       choices: [
         { title: 'Add', description: '[+] Adds Numbers', value: 'add' },
         { title: 'Subtract', description: '[-] Subtract Numbers', value: 'subtract' },
