@@ -33,6 +33,7 @@ const app = async () => {
         { title: 'Subtract', description: '[-] Subtract Numbers', value: 'subtract' },
         { title: 'Divide', description: '[/] Divide Numbers', value: 'divide' },
         { title: 'Multiply', description: '[*] Multiply Numbers', value: 'multiply' },
+        { title: (chalk.red.italic.underline('exit')), description: '[›] Quit the Program', value: 'exit' },
       ],
     }
   ];
